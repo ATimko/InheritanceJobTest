@@ -22,10 +22,10 @@ class SecretaryMain {
       Secretary s = new Secretary(); // Deault Constructor
       
       // Inherited Behavior
-      System.out.println("Secretary work hours: " + e.getWorkHours());
-      System.out.println("Secretary salary: " + e.getSalary());
-      System.out.println("Secretary vacation days: " + e.getVacDays());
-      System.out.println("Secretary nneds to fill: " + e.getForm() + " form for leave application.");
+      System.out.println("Secretary work hours: " + s.getWorkHours());
+      System.out.println("Secretary salary: " + s.getSalary());
+      System.out.println("Secretary vacation days: " + s.getVacDays());
+      System.out.println("Secretary nneds to fill: " + s.getForm() + " form for leave application.");
       
       //Unique Behavior
       s.takeDication("Schedule a meeting at 10am on Tuesday.");
