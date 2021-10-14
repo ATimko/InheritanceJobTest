@@ -7,7 +7,7 @@
 public class Lawyer extends Employee {
    //@override: getVacDays()
    public int getVacDays(){
-      return 15;
+      return super getVacDays() + 5;
    }
    //@override: getForm()
    public int getForm(){
@@ -18,7 +18,7 @@ public class Lawyer extends Employee {
    Param: None
    Return: void
    */
-   public class sue(){
+   public void sue(){
       System.out.println("see you in court !");
    }
 }

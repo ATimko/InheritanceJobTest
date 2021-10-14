@@ -5,9 +5,9 @@
 */
 
 public class legalSecretary extends Employee {
-   //@override
+   //@override getSalary
    public double getSalary(){
-      return 45000;
+      return super getSalary() + 5000;
    }
    /*
       Method: Legal Secretary can file briefs
