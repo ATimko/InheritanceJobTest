@@ -8,7 +8,7 @@ public class Marketer extends Employee{
    //@override getSalary()
    public double getSalary(){
       super.salary += 10000;
-      return super getSalary(); //+ 10000;   
+      return super getSalary() + 10000;   
    }
    
    /*

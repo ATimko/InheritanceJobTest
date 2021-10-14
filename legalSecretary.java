@@ -16,20 +16,26 @@ public class legalSecretary extends Employee {
    */
    
    public void fileBriefs(String text) {
-      System.out.println("I can file legal briefs for the lawyer");
+      System.out.println("I can file legal briefs for the lawyer.");
+   }
+   
+   //@override toString() method
+   public String toString() {
+      return "Legal Secretary: \n" + super.toString();
    }
 }
 
 class LegalSecretaryMain {
    public static void main(String[] args){
       //Creates an instance of secretary
-      Secretary s = new Secretary(); // Deault Constructor
+      Secretary s = new Secretary(); // Default Constructor
       
       // Inherited Behavior
       System.out.println("Legal Secretary work hours: " + s.getWorkHours());
       System.out.println("Legal Secretary salary: " + s.getSalary());
       System.out.println("Legal Secretary vacation days: " + s.getVacDays());
       System.out.println("Legal Secretary nneds to fill: " + s.getForm() + " form for leave application.");
+      s.takeDictation("Schedule a meeting at 10am on Tuesday.");
       
       //Unique Behavior
       s.fileBriefs("Schedule a meeting at 10am on Tuesday.");

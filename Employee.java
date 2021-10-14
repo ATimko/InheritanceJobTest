@@ -7,10 +7,22 @@
 public class Employee {
    //Instance Fields: Encapulation
    private int workHours = 40;
-   private double salary = 40000;
+   private double salary = 50000;
    private int vacDays = 10;
    private String form = "yellow";
+   private static int empCount = 0;     //Static field part of class not object
    
+   //Constructor 
+   public Employee(int hours, double salary, int days) {
+      this.workHours = hours;
+      this.salary = salary;
+      this.vacDays = days;
+      empCount++;
+   }
+   
+   public Employee(){
+      this(40,50000, 10);
+   }
    //Instance Methods
    /*
       Method: Return number of work hours
@@ -46,6 +58,18 @@ public class Employee {
    */
    public int getForm(){
       return this.form;
+   }
+   //@override toString() method
+   public String toString() {
+      return "Work Hours: " + this.workHours + "\nSalary: " + this.salary + "\nVacation Days: " + this.vacDays + "\nForm Data:" + this.form;
+   }
+   /*
+      Method: Return Employee Count
+      Parameter: None
+      Return: Static int
+   */
+   public static int employeeCount(){
+      return empCount;
    }
 }
 
