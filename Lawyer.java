@@ -5,6 +5,8 @@
 */
 
 public class Lawyer extends Employee {
+   // NOTE: Not adding any constructor to Lawyer. So by default super() constructor is invoked
+   
    //@override: getVacDays()
    public int getVacDays(){
       return super getVacDays() + 5;
@@ -20,6 +22,10 @@ public class Lawyer extends Employee {
    */
    public void sue(){
       System.out.println("see you in court !");
+   }
+   //@override: toString() method
+   public String toString(){
+      return "Lawyer:\n" + super.toString();
    }
 }
 class LawyerMain{

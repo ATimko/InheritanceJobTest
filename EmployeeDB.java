@@ -7,7 +7,8 @@
 public class EmployeeDB {
    public static void main(String[] args)   {
       // Polymorphism: Create an Employee database
-      Employee[] empDB = {new Secretary(40, 50000, 10), new LegalSecretary(30, 60000, 10), new Lawyer(40, 50000), new Lawyer(40, 50000), new Marketer(40, 50000, 10)};
+      //Employee[] empDB = {new Secretary(40, 50000, 10), new LegalSecretary(30, 60000, 10), new Lawyer(40, 50000), new Lawyer(40, 50000), new Marketer(40, 50000, 10)};
+      Employee[] empDB = {new Secretary(), new LegalSecretary(), new Lawyer(), new Lawyer(), new Marketer(), new Employee(50, 60000, 15)};      
       
       // Loop through the Employee Database and display their informatiom
       for(Employee e: empDB)  {
@@ -23,5 +24,8 @@ public class EmployeeDB {
       
       // Display total employees in the law firm
       System.out.println("Total Employee count in the Law Firm: " + Employee.employeeCount());
+      
+      Employee e = new Secretary();
+      ((Secretary)e).takeDictation("test");
    }
 }

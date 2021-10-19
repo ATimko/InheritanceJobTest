@@ -12,14 +12,14 @@ public class Employee {
    private String form = "yellow";
    private static int empCount = 0;     //Static field part of class not object
    
-   //Constructor 
+   //Constructor 1
    public Employee(int hours, double salary, int days) {
       this.workHours = hours;
       this.salary = salary;
       this.vacDays = days;
       empCount++;
    }
-   
+   //Constructor 2
    public Employee(){
       this(40,50000, 10);
    }
@@ -41,6 +41,14 @@ public class Employee {
    public int getSalary(){
       return this.salary;
    }
+   /*
+      Method: Update salary for leave application 
+      Param: double
+      Return: void
+   */
+   public void setSalary(double salary)   {
+      this.salary = salary;
+   }
    //Instance Methods
    /*
       Method: Return number of vacation days
@@ -49,6 +57,14 @@ public class Employee {
    */
    public int getVacDays(){
       return this.vacDays;
+   }
+  /*
+     Method: Update vacation days for leave application 
+     Param: int
+     Return: void
+  */
+   public void setVacDays(int days) {
+      this.vacDays = days;
    }
    //Instance Methods
    /*
@@ -59,9 +75,17 @@ public class Employee {
    public int getForm(){
       return this.form;
    }
+   /*
+      Method: Update form for leave application 
+      Param: String
+      Return: void
+   */
+   public void setForm(String form) {
+      this.form = form;
+   }
    //@override toString() method
    public String toString() {
-      return "Work Hours: " + this.workHours + "\nSalary: " + this.salary + "\nVacation Days: " + this.vacDays + "\nForm Data:" + this.form;
+      return "Work Hours: " + this.workHours + "\nSalary: " + this.salary + "\nVacation Days: " + this.vacDays;
    }
    /*
       Method: Return Employee Count

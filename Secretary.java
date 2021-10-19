@@ -5,21 +5,29 @@
 */
 
 public class Secretary extends Employee {
+   // Constrcutor: Let's say Secretary can only be created with defaul values of employee
+   public Secretary() {
+      super();
+   }
    /*
       Method: Secretary can take dictation
       Parameter: String
-      Return: Void
+      Return: void
    */
-   
-   public void takeDication(String text) {
+   public void takeDictation(String text) {
       System.out.println(text);
+   }
+   
+   //@override: toString() method
+   public String toString() {
+      return "Secretary:\n" + super.toString();
    }
 }
 
 class SecretaryMain {
    public static void main(String[] args){
       //Creates an instance of secretary
-      Secretary s = new Secretary(); // Deault Constructor
+      Secretary s = new Secretary(); // Default Constructor
       
       // Inherited Behavior
       System.out.println("Secretary work hours: " + s.getWorkHours());

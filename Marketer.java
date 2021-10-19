@@ -5,10 +5,27 @@
 */
 
 public class Marketer extends Employee{
-   //@override getSalary()
+   // Constructor 1
+   public Marketer(int days, double salary, int vacDays) {
+      super(days,salary,vacDays);
+   }
+   
+   // Constrcutor 2
+   public Marketer() {
+      super();
+   }
+   
+/*   //@override getSalary()
    public double getSalary(){
       super.salary += 10000;
       return super getSalary() + 10000;   
+   }
+*/
+   //@override: getSalary() 
+   public double getSalary()  {
+      // Update salary 
+      super.setSalary(super.getSalary() + 10000);
+      return super.getSalary();
    }
    
    /*
@@ -18,6 +35,10 @@ public class Marketer extends Employee{
    */
    public void advertise(){
       System.out.println("I can advertise for this law firm.");
+   }
+   //@verride: toString() method
+   public String toString()   {
+      return "Marketer:\n" + super.toString();
    }
 }
 class MarketerMain{
